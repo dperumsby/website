@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/etch-a-sketch.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <title>Etch-a-Sketch</title>
+</head>
+<body>
+    <h1 class="title">Etch-a-Sketch</h1>
+    <div class="grid"></div>
+    <div class="new-grid">
+        <input type="range" min="1" max="100" value="16" class="slider" id="numPixels">
+        <script src="js/etch-a-sketch.js"></script>
+        <button id="new-grid" class="new-grid-button" onclick="createGrid()">New Grid</button>
+    </div>
+</body>
+</html>

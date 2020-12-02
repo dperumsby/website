@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/e14f0d63d5.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/index.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto:wght@300,900&display=swap" rel="stylesheet"> 
+        <title>Dean Rumsby's Portfolio</title>    
+    </head>
+    <body>
+        <header>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Introduction -->
+        <section class="intro" id="home">
+            <div class="intro-container">
+                <h1 class="section-title intro-title">
+                    Hi, I am <strong>Dean Rumsby</strong>
+                </h1>
+                <p class="section-subtitle intro-subtitle">Mathematics graduate and beginner programmer</p>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="about-me" id="about">
+            <h2 class="section-title about-me-title">
+                Who Am I?
+            </h2>
+            <p class="section-subtitle about-me-subtitle">Aspiring web/software developer from the UK</p>
+            <div class="about-me-body">
+                <div class="about-me-body-info">
+                    <h3 class="about-me-subsection-title one">Kinda Recently</h3>
+                    <p class="section-text about-me-info-text">
+                        I graduated from the University of Liverpool in 2017 with a First Class BSc in Mathematics. 
+                        From there I started a PhD in Algebraic Geometry, again at the University of Liverpool, but after two long years decided that it was not the path for me.
+                        I have spent the last year volunteering, and now employed at a Buddhist Meditation Centre in the countryside of East Yorkshire, where I am learning to code in the evenings.
+                        I'm having a blast learning all this stuff, and this page is a place for me to document my projects and to start moving towards a new career.
+                        Thanks for dropping by!
+                    </p>
+                </div>
+                <div class="about-me-body-learning">
+                    <h3 class="about-me-subsection-title two">I Am Learning</h3>
+                    <ul class="about-me-learning-list">
+                        <li class="learning-list-item">Python3</li>
+                        <li class="learning-list-item">HTML5</li>
+                        <li class="learning-list-item">CSS3</li>
+                        <li class="learning-list-item">Javascript</li>
+                        <li class="learning-list-item">BASH</li>
+                        <li class="learning-list-item">Basic Cyber-Security</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="my-projects" id="projects">
+            <h2 class="section-title my-projects-title">
+                My Projects
+            </h2>
+            <p class="section-subtitle my-projects-subtitle">A selection of my latest work</p>
+            <div class="portfolio">
+
+                <!-- Project Calculator -->
+                <a href="calculator.html" class="portfolio-item">
+                    <img class="portfolio-image" src="img/calculator.png" alt="picture of calculator web project">
+                    <p class="portfolio-name">Calculator</p>
+                </a>
+
+                <!-- Project Etch-a-Sketch -->
+                <a href="etch-a-sketch.html" class="portfolio-item">
+                    <img class="portfolio-image" src="img/etch-a-sketch.png" alt="picture of etch-a-sketch web project">
+                    <p class="portfolio-name">Etch-a-Sketch</p>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Contact/ Footer -->
+        <footer class="contact-me" id="contact">
+            <address>
+                <ul class="contact-me-links">
+                    <li class="contact-me-item">
+                        <a class="contact-me-link" href="mailto:contact@dperumsby.me">
+                            <i class="fas fa-at"></i>
+                        </a>
+                    </li>
+                    <li class="contact-me-item">
+                        <a class="contact-me-link" href="https://github.com/dperumsby">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+            </address>
+        </footer>
+        <script src="js/index.js"></script>
+    </body>
+</html>
