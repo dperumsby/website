@@ -9,6 +9,7 @@ body {
 }
 
 .calculator {
+    touch-action: none;
     background-color: #2b2d2c;
     margin: auto;
     width: 350px;
@@ -31,6 +32,7 @@ body {
 }
 
 .button {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,6 +78,23 @@ body {
     font-family: 'Goldman', sans-serif;
     font-size: 30px;
     margin-right: 20px;
+}
+
+@media (max-width: 420px) {
+    .calculator {
+        height: 357px;
+        width: 250px;
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .button.delete {
+        font-size: 0.7rem;
+    }
+
+    .display-text {
+        font-size: 18px;
+    }
 }
 
 #display {
