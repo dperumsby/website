@@ -21,6 +21,7 @@ body {
 }
 
 .grid {
+    touch-action: none;
     cursor: crosshair;
     margin: auto;
     display: grid;
