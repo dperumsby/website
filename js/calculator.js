@@ -28,28 +28,45 @@ function operate(op, a, b) {
 // wiring up the buttons
 
 const displayText = document.querySelector(".display-text");
+const miniText = document.querySelector(".mini-text");
 
-let num1;
-let num2;
-let op;
+let num1 = "";
+let num2 = "";
+let op = "";
 
 function populateDisplay(e) {
-    if (displayText.textContent.length <= 14) {
+    if (miniText.textContent.slice(-2, -1) == "=") {
+        miniText.textContent = displayText.textContent;
+    }
+
+    if (displayText.textContent.length <= 13) {
         displayText.textContent += e.srcElement.innerText;
-    } 
+        miniText.textContent += e.srcElement.innerText;
+    }
 }
 
 function prepareOperation(e) {
+    if (op !== "") {
+        return;
+    }
+
     num1 = displayText.textContent;
     op = e.srcElement.innerText
+
+    if (miniText.textContent.slice(-2, -1) == "=") {
+        miniText.textContent = displayText.textContent;
+    }
+
     displayText.textContent = "";
+    miniText.textContent += ` ${op} `;
 }
 
 function calculate(e) {
     if (op && displayText.textContent) {
         num2 = displayText.textContent;
+        miniText.textContent += " = ";
         let answer = (Math.round(operate(op, num1, num2)*10**5)/100000).toString();
-        if (answer.length <= 14) {
+        if (answer.length <= 13) {
             displayText.textContent = answer;
         } else {
             displayText.textContent = "Too large!"
@@ -61,13 +78,20 @@ function calculate(e) {
 
 function backOne(e) {
     displayText.textContent = displayText.textContent.slice(0, -1);
+    if (miniText.textContent.slice(-1) !== " ") {
+        miniText.textContent = miniText.textContent.slice(0, -1);
+    }
+    if (miniText.textContent.slice(-2,-1) == "=") {
+        miniText.textContent = displayText.textContent;
+    }
 }
 
 function reset(e) {
-    num1 = ""
-    num2 = ""
-    op = ""
-    displayText.textContent = ""
+    num1 = "";
+    num2 = "";
+    op = "";
+    displayText.textContent = "";
+    miniText.textContent = "";
 }
 
 const numbers = document.querySelectorAll(".button.number");

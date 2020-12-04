@@ -80,6 +80,13 @@ body {
     margin-right: 20px;
 }
 
+.mini-text {
+    box-sizing: border-box;
+    font-family: 'Goldman', sans-serif;
+    width: 100%;
+    padding-left: 15px;
+}
+
 @media (max-width: 420px) {
     .calculator {
         height: 357px;
@@ -95,11 +102,16 @@ body {
     .display-text {
         font-size: 18px;
     }
+
+    .mini-text {
+        font-size: 0.65rem;
+    }
 }
 
 #display {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: flex-end;
     grid-area: display;
     background-color: #98a474;
