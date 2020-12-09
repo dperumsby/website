@@ -240,27 +240,34 @@ header {
 .about-me-body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    margin-bottom: 3em;
 }
 
 .about-me-subsection-title {
     text-align: center;
 }
 
-.about-me-learning-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    list-style: none;
-    padding-left: 0;
+.learning-icon-grid {
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    font-size: var(--fs-h2);
+    gap: 1em 0.25em;
 }
 
-.learning-list-item {
-    text-align: center;
-    border: 1px solid var(--clr-light);
-    margin-bottom: 0.5em;
-    width: 70%;
-    border-radius: 25px;
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+@media (min-width: 616px) {
+    .learning-icon-grid {
+        margin-top: 0.8em;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
 
 @media (min-width: 616px) {
     .about-me-subsection-title.one {
@@ -269,6 +276,7 @@ header {
 
     .about-me-body {
         gap: 5em;
+        margin-bottom: 1em;
     }
 }
 
@@ -276,7 +284,7 @@ header {
     .about-me-subtitle {
         width: max-content;
         display: block;
-        margin: auto;
+        margin: auto auto 1em auto;
     }
 }
 
